@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg-dark: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --success-color: #10b981;
+    --error-color: #ef4444;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: radial-gradient(circle at top, rgba(79, 70, 229, 0.15) 0%, transparent 70%);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-label {
+    color: var(--text-main);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.form-control {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--glass-border);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
+    color: white;
+}
+
+.btn-predict {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-predict:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.result-card {
+    margin-top: 2rem;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.status-cancerous {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.status-healthy {
+    background: rgba(16, 185, 129, 0.2);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.header-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--glass-border);
+}
+
+.card-img-top {
+    border-radius: 1rem 1rem 0 0;
+    height: 200px;
+    object-fit: cover;
+}
